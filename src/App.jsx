@@ -1,11 +1,11 @@
-import React from 'react';
+
 import { Routes, Route } from 'react-router-dom';
 import LoginPage from './features/auth/pages/Login';
 import DashboardLayout from './features/dashboard/layout/DashboardLayout';
 import DashboardHome from './features/dashboard/pages/DashboardHome';
 import ProtectedRoute from './common/ProtectedRoute';
-import CustomerList from './features/customer/pages/CustomerList';
-
+import CustomerList from './features/customers/pages/CustomerList';
+import HomePage from './features/dashboard/pages/HomePage';
 export default function App() {
   return (
     <Routes>
@@ -13,6 +13,7 @@ export default function App() {
       <Route path="/dashboard" element={
         <ProtectedRoute>
           <DashboardLayout />
+          <HomePage />
         </ProtectedRoute>
       }>
         <Route index element={<DashboardHome />} />

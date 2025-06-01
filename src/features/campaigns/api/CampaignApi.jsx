@@ -1,3 +1,6 @@
+import api from '../../../lib/api';
+
+
 const API_URL = import.meta.env.VITE_API_URL;
 
 export const campaignApi = {
@@ -29,5 +32,14 @@ export const campaignApi = {
       }
     });
     return response.json();
-  }
+  },
+  getCampaignComparisons: async () => {
+    const response = await api.get('/campaigns/comparisons');
+    return response.data;
+  },
+  getCustomerInsights: async (customerId) => {
+    const response = await api.get(`/${customerId}/insights`);
+    return response.data;
+  },
+
 };

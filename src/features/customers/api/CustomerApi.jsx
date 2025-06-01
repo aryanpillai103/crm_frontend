@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 const API_URL = import.meta.env.VITE_API_URL;
 
 // Create axios instance with auth header
@@ -104,3 +103,5 @@ export const customerApi = {
     }
   }
 };
+
+export default customerApi;

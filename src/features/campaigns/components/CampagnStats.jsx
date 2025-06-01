@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { campaignApi } from '../api/campaignApi';
+import { campaignApi } from '../api/CampaignApi';
 
 export default function CampaignStats({ campaignId }) {
   const [stats, setStats] = useState(null);
